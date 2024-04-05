@@ -33,4 +33,24 @@
 // }
 
 //6
+// const euro = 0.92
+// let usd = +prompt("Введите сумму в доларах: ")
+// let result = usd * euro
+// alert(`${result}`)
+
+//7
+// let user_gb = +prompt('Введите объем флешки в Гб:')
+// const mb = 820
+// let gb = user_gb * 1024
+// let result = Math.floor(gb/mb)
+// alert(`На флешку объемом ${user_gb} Гб поместится ${result} файлов размером ${mb} Мб.`)
+
+//8
+// let money = +prompt("Введите сумму денег в кошельке:")
+// let choco = +prompt("Введите цену одной шоколадки:")
+// let quan_choco = Math.floor(money / choco)
+// let change = money - (quan_choco * choco)
+// alert(`Вы можете купить ${quan_choco} шоколадок и у вас останется ${change.toFixed(2)} казахский тугриков.`)
+
+//9
 

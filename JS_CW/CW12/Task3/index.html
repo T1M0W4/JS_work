@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Стилизованный текст</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        text-align: center;
+        color: #007bff;
+    }
+    form {
+        margin-bottom: 20px;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 10px; /* добавленный отступ */
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    button:last-child {
+        margin-right: 0;
+    }
+    button.active {
+        background-color: #0056b3;
+    }
+    .output {
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-top: 20px;
+        font-size: 16px;
+        text-align: left;
+        min-height: 100px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Создать стилизованный текст</h1>
+    <form id="textForm">
+        <label for="inputText">Введите текст:</label>
+        <input type="text" id="inputText" name="inputText" required>
+        <div>
+            <button type="button" id="boldButton"><b>Bold</b></button>
+            <button type="button" id="underlineButton"><u>Underline</u></button>
+            <button type="button" id="leftButton">Left</button>
+            <button type="button" id="rightButton">Right</button>
+            <button type="button" id="italicsButton"><i>Italics</i></button>
+            <button type="button" id="justifyButton">Justify</button>
+        </div>
+        <button type="submit">Показать</button>
+    </form>
+    <div id="output" class="output"></div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('textForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Получаем введенный текст
+        let inputText = document.getElementById('inputText').value;
+
+        // Получаем значения чекбоксов
+        let isBold = document.getElementById('boldButton').classList.contains('active');
+        let isUnderline = document.getElementById('underlineButton').classList.contains('active');
+        let isLeft = document.getElementById('leftButton').classList.contains('active');
+        let isRight = document.getElementById('rightButton').classList.contains('active');
+        let isItalics = document.getElementById('italicsButton').classList.contains('active');
+        let isJustify = document.getElementById('justifyButton').classList.contains('active');
+
+        // Получаем элемент вывода
+        let outputDiv = document.getElementById('output');
+
+        // Очищаем содержимое элемента вывода
+        outputDiv.innerHTML = '';
+
+        // Создаем элемент для вывода текста
+        let textElement = document.createElement('p');
+        textElement.textContent = inputText;
+
+        // Применяем выбранные стили к тексту
+        if (isBold) textElement.style.fontWeight = 'bold';
+        if (isUnderline) textElement.style.textDecoration = 'underline';
+        if (isLeft) textElement.style.textAlign = 'left';
+        if (isRight) textElement.style.textAlign = 'right';
+        if (isItalics) textElement.style.fontStyle = 'italic';
+        if (isJustify) textElement.style.textAlign = 'center';
+
+        // Добавляем элемент с текстом на страницу
+        outputDiv.appendChild(textElement);
+    });
+
+    // Обработчики для кнопок стилей
+    document.getElementById('boldButton').addEventListener('click', function() {
+        this.classList.toggle('active');
+    });
+
+    document.getElementById('underlineButton').addEventListener('click', function() {
+        this.classList.toggle('active');
+    });
+
+    document.getElementById('leftButton').addEventListener('click', function() {
+        this.classList.toggle('active');
+        document.getElementById('rightButton').classList.remove('active');
+    });
+
+    document.getElementById('rightButton').addEventListener('click', function() {
+        this.classList.toggle('active');
+        document.getElementById('leftButton').classList.remove('active');
+    });
+
+    document.getElementById('italicsButton').addEventListener('click', function() {
+        this.classList.toggle('active');
+    });
+
+    document.getElementById('justifyButton').addEventListener('click', function() {
+        this.classList.toggle('active');
+    });
+});
+</script>
+
+</body>
+</html>

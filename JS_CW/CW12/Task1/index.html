@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Salatik</title>
+</head>
+<body>
+
+<div class="container">
+    <!-- Заголовок названия форума -->
+    <h1>S4L4T1K.com</h1>
+
+    <!-- Форма для добавления нового сообщения -->
+    <form id="messageForm">
+        <label for="username">Логин:</label>
+        <input type="text" id="username" required><br>
+        <label for="message">Сообщение:</label><br>
+        <textarea id="message" rows="4" required></textarea><br>
+        <button type="submit">Отправить</button>
+    </form>
+
+    <!-- Список сообщений на форуме -->
+    <ul id="messageList">
+        <!-- Сюда будут добавляться новые сообщения -->
+    </ul>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

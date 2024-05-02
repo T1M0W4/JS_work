@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Тест</title>
+</head>
+<body>
+
+<div class="container">
+    <!-- Заголовок теста -->
+    <h1>Тест по HTML и CSS</h1>
+
+    <!-- Вопросы теста -->
+    <div class="question">
+        <h3>Вопрос 1: Что означает аббревиатура HTML?</h3>
+        <label><input type="radio" name="q1" value="correct"> Гипертекстовый язык разметки</label>
+        <label><input type="radio" name="q1" value="incorrect"> Гипертекстовый макетный язык</label>
+    </div>
+    <div class="question">
+        <h3>Вопрос 2: Какое значение имеет CSS?</h3>
+        <label><input type="radio" name="q2" value="correct"> Каскадные таблицы стилей</label>
+        <label><input type="radio" name="q2" value="incorrect"> Каскадные стили</label>
+    </div>
+    <div class="question">
+        <h3>Вопрос 3: Какие теги используются для создания заголовков в HTML?</h3>
+        <label><input type="radio" name="q3" value="correct"> &lt;h1&gt; - &lt;h6&gt;</label>
+        <label><input type="radio" name="q3" value="incorrect"> &lt;head&gt; - &lt;title&gt;</label>
+    </div>
+    <div class="question">
+        <h3>Вопрос 4: Какой свойство CSS используется для изменения цвета текста?</h3>
+        <label><input type="radio" name="q4" value="correct"> color</label>
+        <label><input type="radio" name="q4" value="incorrect"> background-color</label>
+    </div>
+
+    <!-- Кнопка для завершения теста -->
+    <button id="submit">Завершить тест</button>
+
+    <!-- Результаты теста -->
+    <div id="results">
+        <h2>Результаты теста</h2>
+        <p>Количество правильных ответов: <span id="score">0</span></p>
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

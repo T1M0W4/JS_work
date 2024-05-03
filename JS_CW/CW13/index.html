@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1 -->
+    <!-- <label for="usernameInput">Введите имя пользователя GitHub:</label>
+    <input type="text" id="usernameInput" placeholder="Например, dan" required>
+    <button id="fetchButton">Получить информацию</button> -->
+    <!-- 1 -->
+    <div class="container">
+        <h1>Погода</h1>
+        <label for="unitSelect">Выберите единицы измерения температуры:</label>
+        <select id="unitSelect">
+            <option value="metric">Цельсий</option>
+            <option value="imperial">Фаренгейт</option>
+        </select>
+        <button onclick="getWeather()">Получить погоду</button>
+        <div id="weatherInfo" class="weather-info"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -53,4 +53,25 @@
 // alert(`Вы можете купить ${quan_choco} шоколадок и у вас останется ${change.toFixed(2)} казахский тугриков.`)
 
 //9
+// let number =  prompt('Введите 5 цифр:')
+// if (number.length === 5 && !isNaN(number)) {
+//     let modifiedNumber = number.slice(-1) + number.slice(0, -1);
+//     console.log("Измененное число:", modifiedNumber);
+// } else {
+//     console.log("Ошибка: Введите корректное пятизначное число.");
+// }
+
+//10
+// let sales = parseFloat(prompt("Введите общую сумму продаж за месяц в долларах:"));
+
+
+// if (!isNaN(sales) && sales >= 0) {
+//     let baseSalary = 250;
+//     let commission = 0.10 * sales;
+//     let totalSalary = baseSalary + commission;
+
+//     console.log("Общая зарплата работника:", totalSalary.toFixed(2), "долларов");
+// } else {
+//     console.log("Ошибка: Введите корректную сумму продаж.");
+// }
 

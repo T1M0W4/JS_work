@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация/Авторизация</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Регистрация</h2>
+        <form id="registerForm">
+            <label for="regUsername">Имя пользователя:</label>
+            <input type="text" id="regUsername" required>
+            
+            <label for="regPassword">Пароль:</label>
+            <input type="password" id="regPassword" required>
+            
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+        <h2>Авторизация</h2>
+        <form id="loginForm">
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" required>
+            
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" required>
+            
+            <button type="submit">Войти</button>
+        </form>
+        <div id="error" class="error"></div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

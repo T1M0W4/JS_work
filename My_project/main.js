@@ -1,27 +1,42 @@
-document.getElementById('registerForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+    const registerForm = document.getElementById('registerForm');
+    const errorDiv = document.getElementById('error');
+    
+    if (registerForm) {
+        registerForm.addEventListener('submit', (e) => {
+            e.preventDefault();
 
-    const regUsername = document.getElementById('regUsername').value;
-    const regPassword = document.getElementById('regPassword').value;
+            const username = document.getElementById('RegisterLogin').value;
+            const password = document.getElementById('RegisterPassword').value;
+            const email = document.getElementById('RegisterEmail').value;
+            const dob = document.getElementById('RegisterDOB').value;
+            const gender = document.querySelector('input[name="gender"]:checked').value;
 
-    localStorage.setItem('username', regUsername);
-    localStorage.setItem('password', regPassword);
-
-    alert('Регистрация успешна! Теперь вы можете войти.');
-});
-
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-
-    const storedUsername = localStorage.getItem('username');
-    const storedPassword = localStorage.getItem('password');
-
-    if (username === storedUsername && password === storedPassword) {
-        window.location.href = 'main.html';
-    } else {
-        document.getElementById('error').textContent = 'Неправильное имя пользователя или пароль';
+            if (localStorage.getItem(username)) {
+                errorDiv.textContent = 'Пользователь с таким именем уже существует.';
+            } else {
+                const user = { username, password, email, dob, gender };
+                localStorage.setItem(username, JSON.stringify(user));
+                alert('Регистрация выполнена!');
+                window.location.href = 'index.html';
+            }
+        });
     }
+
+    document.getElementById('btn').addEventListener('click', function() {
+        const username = document.getElementById('Login').value;
+        const password = document.getElementById('Password').value;
+        const storedUser = localStorage.getItem(username);
+
+        if (storedUser) {
+            const user = JSON.parse(storedUser);
+            if (user.password === password) {
+                window.location.href = 'menu.html';
+            } else {
+                document.getElementById('error').textContent = 'Неверное имя пользователя или пароль';
+            }
+        } else {
+            document.getElementById('error').textContent = 'Пользователь не найден';
+        }
+    });
 });

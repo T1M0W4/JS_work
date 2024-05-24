@@ -3,33 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация/Авторизация</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Авторизация</title>
 </head>
 <body>
     <div class="container">
-        <h2>Регистрация</h2>
-        <form id="registerForm">
-            <label for="regUsername">Имя пользователя:</label>
-            <input type="text" id="regUsername" required>
-            
-            <label for="regPassword">Пароль:</label>
-            <input type="password" id="regPassword" required>
-            
-            <button type="submit">Зарегистрироваться</button>
-        </form>
-        <h2>Авторизация</h2>
-        <form id="loginForm">
-            <label for="username">Имя пользователя:</label>
-            <input type="text" id="username" required>
-            
-            <label for="password">Пароль:</label>
-            <input type="password" id="password" required>
-            
-            <button type="submit">Войти</button>
+        <form id="loginForm" class="form">
+            <h3>ВХОД</h3>
+            <h5>Введите ваше имя и пароль</h5>
+            <hr>
+            <div class="LoginBox">
+                <label for="Login">Имя:</label>
+                <input type="text" id="Login" placeholder="Введите имя" required>
+            </div>
+            <div class="PasswordBox">
+                <label for="Password">Пароль:</label>
+                <input type="password" id="Password" placeholder="Введите пароль" required>
+            </div>
+            <button id="btn" class="btn">Войти</button>
+            <p>Нет аккаунта? <a href="register.html" id="show-register">Зарегистрироваться</a></p>
         </form>
         <div id="error" class="error"></div>
     </div>
-    <script src="scripts.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

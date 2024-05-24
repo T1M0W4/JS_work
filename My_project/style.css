@@ -1,79 +1,97 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2;
+    box-sizing: border-box;
 }
-
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: 
+    linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(img/fon4.jpg);
+    font-family: "Roboto", sans-serif;
+}
 .container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    margin: 50px auto;
+    background-color: rgb(67, 179, 231);
+    border-radius: 10px;
     text-align: center;
+    border: 3px solid #363434;
 }
-
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px 0;
+.container h3 { 
+    background-color: #d26637;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 5px;
+    padding: 6px 120px;
 }
-
-header nav ul {
-    list-style-type: none;
-    padding: 0;
+.LoginBox, .PasswordBox, .EmailBox, .DateBox, .GenderBox, button {
+    margin-top: 5px;
 }
-
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
+button {
+    margin-bottom: 10px;
 }
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
+.PasswordBox, .EmailBox, .DateBox, .GenderBox {
+    margin-left: 22px; 
 }
-
-main {
-    padding: 20px;
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"] {
+    padding: 4px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #eeeeee;
 }
-
-.block {
-    background-color: #fff;
+input[type="text"] {
+    width: 195px;
+    margin-top: 10px;
+}
+input[type="date"]{
+    width: 113px;
+}
+input[type="email"] {
+    padding-left: 20px;
+}
+.LoginBox, .EmailBox, .DateBox, .GenderBox {
+    margin-left: 22px;
+}
+hr {
+    border: none;
+    height: 2px;
+    background-color: #d26637;
     margin: 10px 0;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+.btn {
+    background: transparent;
+    padding: 5px;
+    width: 100px;
+    border: 2px solid #222;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    color: #222;
+    outline: none;
+    margin-top: 20px;
 }
-
+.btn:hover {
+    background-color: #222;
+    color: aqua;
+    transition: all 0.275s ease-in;
+}
+h5 {
+    margin-top: 25px;
+}
+.hidden {
+    display: none;
+}
 .error {
     color: red;
     margin-top: 10px;
 }
-
-@media (max-width: 600px) {
-    header nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .container {
-        width: 90%;
-    }
-
-    footer {
-        position: static;
-    }
+p {
+    margin-top: 10px;
+    margin-bottom: 20px;
 }

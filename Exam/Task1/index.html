@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Image Gallery</title>
+</head>
+<body>
+    <div class="gallery">
+        <img src="img/1.jpg" class="thumbnail" alt="Image 1" data-full="img/1.jpg">
+        <img src="img/2.png" class="thumbnail" alt="Image 2" data-full="img/2.png">
+        <img src="img/3.jpg" class="thumbnail" alt="Image 3" data-full="img/3.jpg">
+    </div>
+
+    <div id="lightbox" class="lightbox hidden">
+        <span class="close">&times;</span>
+        <img class="lightbox-img" id="lightboxImg" src="">
+        <div class="controls">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

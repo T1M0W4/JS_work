@@ -4,94 +4,80 @@
     box-sizing: border-box;
 }
 body {
+    font-family: "Roboto", sans-serif;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: 
-    linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(img/fon4.jpg);
-    font-family: "Roboto", sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+#bgVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: -1;
 }
 .container {
-    background-color: rgb(67, 179, 231);
-    border-radius: 10px;
+    background-color: rgba(67, 179, 231, 0.85);
+    border-radius: 5px;
     text-align: center;
-    border: 3px solid #363434;
+    padding: 20px;
+    width: 300px;
+    z-index: 1;
 }
-.container h3 { 
+.container h3 {
     background-color: #d26637;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     margin-bottom: 5px;
-    padding: 6px 120px;
+    padding: 10px;
 }
-.LoginBox, .PasswordBox, .EmailBox, .DateBox, .GenderBox, button {
-    margin-top: 5px;
-}
-button {
-    margin-bottom: 10px;
-}
-.PasswordBox, .EmailBox, .DateBox, .GenderBox {
-    margin-left: 22px; 
+.LoginBox, .PasswordBox, .EmailBox, .ConfirmPasswordBox, button {
+    margin-top: 10px;
 }
 input[type="text"],
 input[type="password"],
-input[type="email"],
-input[type="date"] {
-    padding: 4px;
-    margin-bottom: 20px;
+input[type="email"] {
+    padding: 10px;
+    width: calc(100% - 22px);
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #eeeeee;
 }
-input[type="text"] {
-    width: 195px;
-    margin-top: 10px;
-}
-input[type="date"]{
-    width: 113px;
-}
-input[type="email"] {
-    padding-left: 20px;
-}
-.LoginBox, .EmailBox, .DateBox, .GenderBox {
-    margin-left: 22px;
-}
-hr {
-    border: none;
-    height: 2px;
-    background-color: #d26637;
-    margin: 10px 0;
-}
-.btn {
-    background: transparent;
-    padding: 5px;
-    width: 100px;
+button {
+    padding: 10px;
+    width: 100%;
     border: 2px solid #222;
     cursor: pointer;
     border-radius: 15px;
     font-size: 16px;
     letter-spacing: 1.5px;
     color: #222;
-    outline: none;
-    margin-top: 20px;
+    background: transparent;
 }
-.btn:hover {
+button:hover {
     background-color: #222;
-    color: aqua;
-    transition: all 0.275s ease-in;
-}
-h5 {
-    margin-top: 25px;
-}
-.hidden {
-    display: none;
+    color: #eee;
+    transition: all 0.3s ease-in-out;
 }
 .error {
     color: red;
     margin-top: 10px;
 }
 p {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
